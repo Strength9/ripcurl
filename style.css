@@ -1,0 +1,40 @@
+/*!
+Theme Name: RipCurl
+Author: Dave Pratt
+Description: A minimal, block-based WordPress theme with SCSS support
+Version: 1.0
+Requires at least: 6.1
+Tested up to: 8.2
+Requires PHP: 8.2
+*/
+.site-header {
+  padding: 2rem;
+  background: #0073aa;
+  color: #fff;
+}
+.site-header h1 {
+  margin: 0;
+}
+
+.site-footer {
+  padding: 2rem;
+  background: #222;
+  color: #eee;
+  text-align: center;
+}
+
+.wp-block-button .wp-block-button__link {
+  background-color: #0073aa;
+  color: #fff;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+}
+.wp-block-button .wp-block-button__link:hover {
+  opacity: 0.85;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f9f9f9;
+  color: #111;
+}

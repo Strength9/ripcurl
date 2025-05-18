@@ -1,0 +1,32 @@
+{
+    "version": 2,
+    "settings": {
+      "color": {
+        "palette": [
+          { "slug": "black", "color": "#000000", "name": "Black" },
+          { "slug": "white", "color": "#ffffff", "name": "White" },
+          { "slug": "blue", "color": "#0073aa", "name": "Blue" }
+        ]
+      },
+      "spacing": {
+        "units": [ "px", "em", "rem", "%" ]
+      },
+      "typography": {
+        "fontSizes": [
+          { "slug": "small", "size": "0.875rem", "name": "Small" },
+          { "slug": "medium", "size": "1rem", "name": "Medium" },
+          { "slug": "large", "size": "1.5rem", "name": "Large" }
+        ]
+      }
+    },
+    "styles": {
+      "spacing": {
+        "padding": "1rem"
+      },
+      "typography": {
+        "fontSize": "1rem",
+        "lineHeight": "1.6"
+      }
+    }
+  }
+  

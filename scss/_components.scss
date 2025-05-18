@@ -1,0 +1,15 @@
+// _components.scss
+@use 'variables' as *;
+
+.wp-block-button {
+  .wp-block-button__link {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 0.75em 1.5em;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}

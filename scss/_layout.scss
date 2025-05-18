@@ -1,0 +1,19 @@
+// _layout.scss
+@use 'variables' as *;
+
+.site-header {
+  padding: 2rem;
+  background: $primary-color;
+  color: #fff;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.site-footer {
+  padding: 2rem;
+  background: $dark-grey;
+  color: #eee;
+  text-align: center;
+}

@@ -1,0 +1,20 @@
+@use 'variables' as *;
+
+body.block-editor-page {
+  background-color: #fff;
+
+  .editor-styles-wrapper {
+    padding: 2rem;
+    font-family: system-ui, sans-serif;
+    color: $text-color;
+  }
+
+  .wp-block {
+    max-width: 100%;
+  }
+
+  .wp-block-button .wp-block-button__link {
+    background-color: $primary-color;
+    color: #fff;
+  }
+}
