@@ -16,6 +16,7 @@ function prompt(query) {
 (async () => {
   const blockName = await prompt('✔ Block name (kebab-case): ');
   const blockTitle = await prompt('✔ Block title: ');
+  const blockCategory = await prompt('✔ Block category (default: ripcurl): ') || 'ripcurl';
   const useRender = (await prompt('✔ Use render.php? (y/N): ')).toLowerCase() === 'y';
 
   const blockDir = path.join(srcDir, blockName);
@@ -33,7 +34,7 @@ function prompt(query) {
     apiVersion: 2,
     name: `ripcurl/${blockName}`,
     title: blockTitle,
-    category: "ripcurl",
+    category: blockCategory,
     icon: "smiley",
     description: `A custom block: ${blockTitle}`,
     keywords: [blockName],
@@ -88,6 +89,6 @@ export default function Edit() {
     await fs.writeFile(path.join(blockDir, 'render.php'), renderPhp);
   }
 
-  console.log(`✔ Block "${blockName}" scaffolded successfully.`);
+  console.log(`✔ Block "${blockName}" scaffolded successfully under category "${blockCategory}".`);
   rl.close();
 })();

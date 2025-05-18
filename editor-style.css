@@ -1,15 +1,1 @@
-body.block-editor-page {
-  background-color: #fff;
-}
-body.block-editor-page .editor-styles-wrapper {
-  padding: 2rem;
-  font-family: system-ui, sans-serif;
-  color: #111;
-}
-body.block-editor-page .wp-block {
-  max-width: 100%;
-}
-body.block-editor-page .wp-block-button .wp-block-button__link {
-  background-color: #0073aa;
-  color: #fff;
-}
+body.block-editor-page{background-color:#fff}body.block-editor-page .editor-styles-wrapper{padding:2rem;font-family:system-ui,sans-serif;color:#111}body.block-editor-page .wp-block{max-width:100%}body.block-editor-page .wp-block-button .wp-block-button__link{background-color:#0073aa;color:#fff}

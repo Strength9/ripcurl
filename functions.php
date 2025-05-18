@@ -52,7 +52,7 @@ function ripcurl_add_block_categories($categories, $post) {
         $categories,
         [
             [
-                'slug'  => 'ripcurl',
+                'slug'  => 'ripcurlblocks',
                 'title' => __('RipCurl Blocks', 'ripcurl'),
                 'icon'  => null
             ]
@@ -60,3 +60,8 @@ function ripcurl_add_block_categories($categories, $post) {
     );
 }
 add_filter('block_categories_all', 'ripcurl_add_block_categories', 10, 2);
+
+
+add_shortcode('year', function() {
+    return date('Y');
+});
