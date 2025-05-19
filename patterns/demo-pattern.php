@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Rip Curl Pattern
- * Slug: ripcurl/demo-pattern
- * Categories: ripcurlblocks
+ * Title: Demo Two Column Pattern
+ * Slug: ripcurlpatterns/demo-pattern
+ * Categories: columns, featured
  * Block Types: core/columns, core/group
  * Inserter: yes
  */
