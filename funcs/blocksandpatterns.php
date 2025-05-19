@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return void
  */
 
-function ripcurl_register_all_blocks() {
+function rip_register_all_blocks() {
     $blocks_dir = get_template_directory() . '/build';
     foreach ( glob( $blocks_dir . '/*/block.json' ) as $block_json ) {
         $block_path = dirname( $block_json );
@@ -47,7 +47,7 @@ function ripcurl_register_all_blocks() {
         register_block_type( $block_path, $args );
     }
 }
-add_action( 'init', 'ripcurl_register_all_blocks' );
+add_action( 'init', 'rip_register_all_blocks' );
 
 /**
  * Register all block patterns in /patterns directory.
@@ -57,7 +57,7 @@ add_action( 'init', 'ripcurl_register_all_blocks' );
  * @since 1.0.0
  * @return void
  */
-function ripcurl_register_all_block_patterns() {
+function rip_register_all_block_patterns() {
     $patterns_dir = get_template_directory() . '/patterns';
     if ( ! is_dir( $patterns_dir ) ) {
         return;
@@ -117,7 +117,7 @@ add_action( 'init', function() {
     );
 });
 
-add_action( 'init', 'ripcurl_register_all_block_patterns' );
+add_action( 'init', 'rip_register_all_block_patterns' );
 
 /**
  * Register a custom block category called "RipCurl Blocks".
@@ -127,7 +127,7 @@ add_action( 'init', 'ripcurl_register_all_block_patterns' );
  * @param WP_Post $post Current post object.
  * @return array Modified block categories.
  */
-function ripcurl_add_block_categories( $categories, $post ) {
+function rip_add_block_categories( $categories, $post ) {
     return array_merge(
         $categories,
         [
@@ -139,6 +139,6 @@ function ripcurl_add_block_categories( $categories, $post ) {
         ]
     );
 }
-add_filter('block_categories_all', 'ripcurl_add_block_categories', 10, 2);
+add_filter('block_categories_all', 'rip_add_block_categories', 10, 2);
 
 
