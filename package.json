@@ -4,14 +4,14 @@
   "description": "Modern WordPress block theme with SCSS, custom blocks, and build automation.",
   "scripts": {
     "build": "npm run build:scss && npm run build:blocks",
-    "build:scss": "sass scss/style.scss style.css --no-source-map --style=compressed && sass scss/editor.scss editor-style.css --no-source-map --style=compressed",
-    "build:blocks": "wp-scripts build && node scripts/copy-assets.js",
+    "build:scss": "sass _development/scss/style.scss style.css --no-source-map --style=compressed && sass _development/scss/editor.scss editor-style.css --no-source-map --style=compressed",
+    "build:blocks": "wp-scripts build && node _development/scripts/copy-assets.js",
     "start": "npm-run-all --parallel start:scss start:blocks copy:watch",
-    "start:scss": "sass scss/style.scss style.css --watch --no-source-map --style=compressed & sass scss/editor.scss editor-style.css --watch --no-source-map --style=compressed",
+    "start:scss": "sass _development/scss/style.scss style.css --watch --no-source-map --style=compressed & sass _development/scss/editor.scss editor-style.css --watch --no-source-map --style=compressed",
     "start:blocks": "wp-scripts start",
-    "copy:watch": "nodemon --watch src --ext php,svg,png,jpg,webp --exec \"node scripts/copy-assets.js\"",
-    "copy-block-assets": "node scripts/copy-assets.js",
-    "create-block": "node scripts/create-block.js"
+    "copy:watch": "nodemon --watch src --ext php,svg,png,jpg,webp --exec \"node _development/scripts/copy-assets.js\"",
+    "copy-block-assets": "node _development/scripts/copy-assets.js",
+    "create-block": "node _development/scripts/create-block.js"
   },
   "devDependencies": {
     "@wordpress/scripts": "^30.7.0",
