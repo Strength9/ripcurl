@@ -19,8 +19,8 @@ function rip_register_theme_options_page() {
         __('Theme Options', 'ripcurl'),
         __('Theme Options', 'ripcurl'),
         'manage_options',
-        'ripcurl-theme-options',
-        'ripcurl_render_theme_options_page',
+        'rip-theme-options',
+        'rip_render_theme_options_page',
         'dashicons-admin-generic',
         61
     );
