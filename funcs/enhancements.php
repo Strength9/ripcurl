@@ -38,7 +38,7 @@ add_filter( 'upload_mimes', function ( $mimes ) {
  * @param array $mimes Allowed mimes.
  * @return array Modified file data.
  */
-function ripcurl_sanitize_svg_upload( $data, $file, $filename, $mimes ) {
+function rip_sanitize_svg_upload( $data, $file, $filename, $mimes ) {
     $filetype = wp_check_filetype( $filename, $mimes );
     if ( $filetype['ext'] === 'svg' && file_exists( $file ) ) {
         $svg = file_get_contents( $file );
@@ -58,7 +58,7 @@ function ripcurl_sanitize_svg_upload( $data, $file, $filename, $mimes ) {
     }
     return $data;
 }
-add_filter( 'wp_handle_upload_prefilter', 'ripcurl_sanitize_svg_upload', 10, 4 );
+add_filter( 'wp_handle_upload_prefilter', 'rip_sanitize_svg_upload', 10, 4 );
 
 /**
  * Ensure correct SVG mime type after upload.
