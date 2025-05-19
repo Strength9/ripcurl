@@ -109,10 +109,10 @@ function ripcurl_register_all_block_patterns() {
 // Register the custom block pattern category for Patterns UI
 add_action( 'init', function() {
     register_block_pattern_category(
-        'ripcurlblocks',
+        'ripcurlpatterns',
         [
-            'label' => __( 'RipCurl Blocks', 'ripcurl' ),
-            // 'description' => __( 'Custom patterns for RipCurl theme', 'ripcurl' ), // Optional for WP 6.5+
+            'label' => __( 'RipCurl Block Patterns', $text_domain ),
+            // 'description' => __( 'Custom patterns for RipCurl theme', $text_domain ), // Optional for WP 6.5+
         ]
     );
 });
@@ -133,7 +133,7 @@ function ripcurl_add_block_categories( $categories, $post ) {
         [
             [
                 'slug'  => 'ripcurlblocks',
-                'title' => __('RipCurl Blocks', 'ripcurl'),
+                'title' => __('RipCurl Blocks', $text_domain),
                 'icon'  => null
             ]
         ]

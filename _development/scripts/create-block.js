@@ -29,7 +29,7 @@ const templates = {
   'block.json': `{
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "ripcurl/{{blockName}}",
+  "name": "ripcurlcb/{{blockName}}",
   "version": "0.1.0",
   "title": "{{blockTitle}}",
   "category": "{{blockCategory}}",
@@ -80,7 +80,7 @@ import './editor.scss';
 export default function Edit() {
 	return (
 		<p { ...useBlockProps() }>
-			{ __( 'Todo List – hello from the editor!', '{{blockName}}' ) }
+			{ __( '{{blockTitle}} – hello from the editor!', '{{blockName}}' ) }
 		</p>
 	);
 }
@@ -145,7 +145,7 @@ import { useBlockProps } from '@wordpress/block-editor';
 export default function save() {
 	return (
 		<p { ...useBlockProps.save() }>
-			{ 'Todo List – hello from the saved content!' }
+			{ '{{blockTitle}} – hello from the saved content!' }
 		</p>
 	);
 }
