@@ -52,7 +52,7 @@ add_action('admin_init', 'rip_register_theme_settings');
 /**
  * Sanitize Options
  */
-function ripc_sanitize_theme_options($options) {
+function rip_sanitize_theme_options($options) {
     $fields = [
         'copyright', 'facebook', 'instagram', 'twitter', 'linkedin', 'youtube', 'kick', 'footer_text', 'footer_logo',
         'address', 'telephone', 'email'
@@ -174,7 +174,7 @@ function rip_render_theme_options_page() {
 /**
  * Helper: Get theme option by key
  */
-function ripcurl_get_theme_option($key) {
+function rip_get_theme_option($key) {
     $options = get_option('rip_theme_options', []);
     return $options[$key] ?? '';
 }
