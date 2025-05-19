@@ -11,7 +11,7 @@ function rip_setup() {
     add_theme_support('responsive-embeds');
     add_theme_support('custom-logo');
 }
-add_action('after_setup_theme', 'ripc_setup');
+add_action('after_setup_theme', 'rip_setup');
 
 function rip_enqueue_editor_styles() {
     add_theme_support('editor-styles');
