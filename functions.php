@@ -1,7 +1,7 @@
 <?php
 
 // Theme text domain
-$text_domain = 'ripcurl-theme';
+$text_domain = 'ripcurl_theme';
 
 function ripcurl_setup() {
     add_theme_support('block-editor-styles');
