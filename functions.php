@@ -24,6 +24,7 @@ add_action('after_setup_theme', 'ripcurl_enqueue_editor_styles');
 
 
 require_once get_template_directory() . '/funcs/blocksandpatterns.php';
-require_once get_template_directory() . '/funcs/disable.php';
-require_once get_template_directory() . '/funcs/enable.php';
+require_once get_template_directory() . '/funcs/cleanup.php';
+require_once get_template_directory() . '/funcs/enhancements.php';
 require_once get_template_directory() . '/funcs/shortcodes.php';
+require_once get_template_directory() . '/funcs/theme-options.php';

@@ -64,7 +64,7 @@ __webpack_require__.r(__webpack_exports__);
 function Edit() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(),
-    children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Todo List – hello from the editor!', 'template-block')
+    children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Template Block – hello from the editor!', 'template-block')
   });
 }
 
@@ -171,7 +171,7 @@ __webpack_require__.r(__webpack_exports__);
 function save() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save(),
-    children: 'Todo List – hello from the saved content!'
+    children: 'Template Block – hello from the saved content!'
   });
 }
 

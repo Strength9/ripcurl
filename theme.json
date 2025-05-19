@@ -1,11 +1,15 @@
 {
     "version": 2,
     "settings": {
+      "layout": {
+        "contentSize": "800px",
+        "wideSize": "1200px"
+      },
       "color": {
         "palette": [
-          { "slug": "black", "color": "#000000", "name": "Black" },
-          { "slug": "white", "color": "#ffffff", "name": "White" },
-          { "slug": "blue", "color": "#0073aa", "name": "Blue" }
+          { "slug": "primary", "color": "#0073aa", "name": "Primary" },
+          { "slug": "secondary", "color": "#0073aa", "name": "Secondary" },
+          { "slug": "tertiary", "color": "#0073aa", "name": "Tertiary" }
         ]
       },
       "spacing": {
@@ -16,10 +20,60 @@
           { "slug": "small", "size": "0.875rem", "name": "Small" },
           { "slug": "medium", "size": "1rem", "name": "Medium" },
           { "slug": "large", "size": "1.5rem", "name": "Large" }
+        ],
+        "fontFamilies": [
+          {
+            "slug": "my-custom-font",
+            "name": "My Custom Font",
+            "fontFamily": "'My Custom Font', sans-serif"
+          },
+          {
+            "slug": "sans",
+            "name": "Sans Serif",
+            "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif"
+          },
+          {
+            "slug": "serif",
+            "name": "Serif",
+            "fontFamily": "Georgia, 'Times New Roman', Times, serif"
+          },
+          {
+            "slug": "mono",
+            "name": "Monospace",
+            "fontFamily": "Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
+          }
         ]
       }
     },
     "styles": {
+      "blocks": {
+        "core/heading": {
+          "typography": {
+            "fontFamily": "var(--wp--preset--font-family--sans)",
+            "fontWeight": "700",
+            "lineHeight": "1.2"
+          },
+          "color": {
+            "text": "var(--wp--preset--color--primary)"
+          }
+        },
+        "core/paragraph": {
+          "typography": {
+            "fontFamily": "var(--wp--preset--font-family--sans)",
+            "fontSize": "1rem",
+            "lineHeight": "1.6"
+          }
+        },
+        "core/list": {
+          "typography": {
+            "fontFamily": "var(--wp--preset--font-family--sans)",
+            "fontSize": "1rem"
+          },
+          "spacing": {
+            "margin": "0 0 1em 0"
+          }
+        }
+      },
       "spacing": {
         "padding": "1rem"
       },
