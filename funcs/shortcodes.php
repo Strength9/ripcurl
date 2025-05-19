@@ -38,8 +38,8 @@ add_shortcode( 'year', function() {
  * @return string
  */
 add_shortcode( 'site_copyright', function() {
-    if ( function_exists( 'ripcurl_get_theme_option' ) ) {
-        $copyright = ripcurl_get_theme_option( 'copyright' );
+    if ( function_exists( 'rip_get_theme_option' ) ) {
+        $copyright = rip_get_theme_option( 'copyright' );
         return esc_html( $copyright );
     }
     return '';
