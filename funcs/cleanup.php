@@ -8,7 +8,7 @@
  *
  * PERFORMANCE: Removes bloat for faster page loads and a leaner frontend.
  *
- * @package RipCurl
+ * @package Boakes Joinery
  * @since 1.0.0
  */
 
@@ -17,15 +17,12 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-// Theme text domain
-$text_domain = 'ripcurl-theme';
-
 /**
  * Remove unnecessary <head> tags, emoji scripts, and heartbeat API.
  *
  * @since 1.0.0
  */
-add_action( 'init', function () use ( $text_domain ) {
+add_action( 'init', function () {
     // Remove various <head> links and meta tags
     remove_action( 'wp_head', 'rsd_link' ); // RSD link
     remove_action( 'wp_head', 'wlwmanifest_link' ); // Windows Live Writer link
@@ -67,7 +64,7 @@ add_filter( 'xmlrpc_enabled', '__return_false' );
 
 // Disable all feeds (RSS, Atom, etc.)
 foreach ( [ 'do_feed', 'do_feed_rdf', 'do_feed_rss', 'do_feed_rss2', 'do_feed_atom' ] as $feed_action ) {
-    add_action( $feed_action, function () use ( $text_domain ) {
-        wp_die( __( 'Feeds are disabled.', $text_domain ), '', [ 'response' => 403 ] );
+    add_action( $feed_action, function () {
+        wp_die( __( 'Feeds are disabled.', CC_TEXT_DOMAIN ), '', [ 'response' => 403 ] );
     }, 1 );
 }
