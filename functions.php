@@ -19,7 +19,19 @@ function rip_enqueue_editor_styles() {
 }
 add_action('after_setup_theme', 'rip_enqueue_editor_styles');
 
-
+/**
+ * Enqueue theme styles and scripts
+ */
+function rip_enqueue_theme_assets() {
+    // Enqueue main stylesheet
+    wp_enqueue_style(
+        'boakesjoinery-style',
+        get_stylesheet_uri(),
+        array(),
+        filemtime(get_stylesheet_directory() . '/style.css')
+    );
+}
+add_action('wp_enqueue_scripts', 'rip_enqueue_theme_assets');
 
 
 
