@@ -42,7 +42,7 @@ add_action('admin_enqueue_scripts', 'rip_theme_options_admin_scripts');
 function rip_register_theme_settings() {
     register_setting('rip_theme_options_group', 'rip_theme_options', [
         'type' => 'array',
-        'sanitize_callback' => 'ripcurl_sanitize_theme_options',
+        'sanitize_callback' => 'rip_sanitize_theme_options',
         'show_in_rest' => false,
     ]);
 }
